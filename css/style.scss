@@ -192,7 +192,7 @@ body{
                         }
 
                         &::before{
-                            content: url(/img/arrow-right.svg);
+                            content: url(/Dashboard-UI--di-BoringHub/img/arrow-right.svg);
                             margin: 0px 15px;
                             position: relative;
                             top: 4px;
@@ -495,7 +495,7 @@ body{
 .icona-tre-puntini{
     cursor: pointer;
     &::after{
-        content: url('/img/icona-tre-puntini.svg');
+        content: url('/Dashboard-UI--di-BoringHub/img/icona-tre-puntini.svg');
         display: flex;
         height: 35px;
         width: 35px;
