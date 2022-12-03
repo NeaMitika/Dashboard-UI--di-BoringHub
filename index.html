@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M2Garage - Fornitori - Spa Michelin Italia - Azienda</title>
+
+    <link rel="stylesheet" href="/css/style.min.css">
+    <link rel="stylesheet" href="/css/icons.css">
+
+    <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+    <div class="menu shadow">
+        <div class="logo">
+            <picture><img src="/img/logo.svg" alt=""></picture>
+        </div>
+
+        <div class="menu-list">
+            <ul>
+                <li class="selected"><i class="isax isax-shop"></i>Fornitori</li>
+                <li><i class="isax isax-car"></i>Gomme</li>
+                <li><i class="isax isax-convert-card"></i>Servizi</li>
+                <li><i class="isax isax-people"></i>Clienti</li>
+
+                <span></span>
+                
+                <li><i class="isax isax-task"></i>Commesse</li>
+                <li><i class="isax isax-truck"></i>Ordini</li>
+                <li><i class="isax isax-box"></i>Magazzino</li>
+                <li><i class="isax isax-note-2"></i>Preventivi</li>
+            </ul>
+        </div>
+
+        <div class="icons-bottom">
+            <i class="isax isax-user4 profile"></i>
+            <i class="isax isax-notification notification"></i>
+            <i class="isax isax-setting-2 settings"></i>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="sfondo-grigio"></div>
+
+        <div class="bar shadow">
+            <div class="breadcrumbs">
+                <ul>
+                    <li>Fornitori</li>
+                    <li>Spa Michelin Italia</li>
+                </ul>
+                <div class="stato">Azienda</div>
+            </div>
+            <div class="cta cta-modifica" onclick="show_hide()">
+                <div class="edit"><i class="isax isax-edit-25"></i></div>
+                <div class="dropdown" id="dropdown-content" style="display: none;">
+                    <ul>
+                        <li><i class="isax isax-trash"></i>Elimina scheda</li>
+                        <li><i class="isax isax-copy"></i>Duplica scheda</li>
+                        <li><i class="isax isax-export-3"></i>Esporta Excel</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="widgets">
+            <div class="sinistra">
+                <div class="widget shadow info-generali">
+                    <div class="head">
+                        <div class="titolo">
+                            Informazioni generali
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="info">
+                            <p>Nome Azienda</p>
+                            <p>Spa Michelin Italia</p>
+                        </div>
+                        <div class="info">
+                            <p>Telefono</p>
+                            <p>0171-315.111</p>
+                        </div>
+                        <div class="info">
+                            <p>Partita IVA</p>
+                            <p>00570070011 </p>
+                        </div>
+                        <div class="info">
+                            <p>Codice Fiscale</p>
+                            <p>00570070011</p>
+                        </div>
+                        <div class="info">
+                            <p>Partita IVA</p>
+                            <p>00570070011 </p>
+                        </div>
+                        <div class="info">
+                            <p>Codice Fiscale</p>
+                            <p>00570070011</p>
+                        </div>
+                        <div class="info">
+                            <p>Descrizione</p>
+                            <p>Lorem ipsum dolor sit amet. Nesciunt autem ut laborum quas qui voluptas laboriosam aut nesciunt eligendi.</p>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        Ultima modifica Lunedì 5 Settembre 2022 alle Ore 15:42
+                    </div>
+                </div>
+            </div>
+
+            <div class="destra">
+                <div class="widget shadow info-tipologia-articoli">
+                    <div class="head">
+                        <div class="titolo"> 
+                            Tipologia articoli associati
+                        </div>
+                        <div class="cta">
+                            Modifica
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="info">
+                            <p>Gomme</p>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        Ultima modifica Lunedì 5 Settembre 2022 alle Ore 15:42
+                    </div>
+                </div>
+            </div>
+
+            <div class="pieno">
+                <div class="widget shadow ordini">
+                    <div class="head">
+                        <div class="titolo">
+                            Ordini
+                        </div>
+                        <div class="cta">
+                            Aggiungi
+                        </div>
+                    </div>
+
+                    <div class="body">
+                        <div class="toggle">
+                            <div class="selected">In corso</div>
+                            <div>Effettuati</div>
+                        </div>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Articolo/i</th>
+                                    <th>Quantità</th>
+                                    <th>Data ordine</th>
+                                    <th>Data arrivo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mario Rossi</td>
+                                    <td>Michelin Primacy3 205/55/16 Estivo</td>
+                                    <td>4</td>
+                                    <td>17 Ottobre 2022</td>
+                                    <td>19 Ottobre 2022</td>
+                                    <td><i class="icona-tre-puntini"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Mario Rossi</td>
+                                    <td>Michelin Primacy3 205/55/16 Estivo</td>
+                                    <td>4</td>
+                                    <td>17 Ottobre 2022</td>
+                                    <td>19 Ottobre 2022</td>
+                                    <td><i class="icona-tre-puntini"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>Mario Rossi</td>
+                                    <td>Michelin Primacy3 205/55/16 Estivo</td>
+                                    <td>4</td>
+                                    <td>17 Ottobre 2022</td>
+                                    <td>19 Ottobre 2022</td>
+                                    <td><i class="icona-tre-puntini"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>                        
+                    </div>
+
+                    <div class="footer">
+                        Ultima modifica Lunedì 5 Settembre 2022 alle Ore 15:42
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
