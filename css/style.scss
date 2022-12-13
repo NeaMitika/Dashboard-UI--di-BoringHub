@@ -1,4 +1,4 @@
-@import url('/Dashboard-UI--di-BoringHub/css/icons.css');
+@import url('../css/icons.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $colore-principale: #F9B233;
@@ -22,6 +22,28 @@ $grigio-molto-chiaro: #E0E0E0;
 $nero: #262626;
 $colore-sfondo: #F9F9F9;
 
+$mobile-width: 600px;
+$tablet-width: 1000px;
+$laptop-width: 1500px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$laptop-width}){
+    @content;
+  }
+}
+
 body{
     background-color: $colore-sfondo;
     display: flex;
@@ -37,11 +59,15 @@ body{
         width: 250px;
         height: calc(100dvh - 130px);
         padding: 30px;
-        margin: 35px;
+        margin: 35px 0 35px 35px;
         position: fixed;
         z-index: 2;     
         display: flex;
         flex-direction: column;
+
+        @include tablet(){
+            display: none;
+        }
         
         .logo{
             text-align: center;
@@ -58,8 +84,8 @@ body{
                 li{
                     list-style: none;
                     font-weight: 400;
-                    font-size: 20px;
-                    padding: 20px 35px;
+                    font-size: 18px;
+                    padding: 17px 30px;
                     border-radius: 10px;
                     display: flex;
 
@@ -145,6 +171,10 @@ body{
         position: absolute;
         right: 0;
 
+        @include tablet(){
+            width: 100%;
+        }
+
         .sfondo-grigio{
             width: 100%;
             height: 180px;
@@ -161,11 +191,15 @@ body{
             justify-content: space-between;
             align-items: center;
             margin-right: 35px;
-            min-height: 100px;
+            min-height: 90px;
             padding: 0 35px;
             position: sticky;
             top: 35px;  
             z-index: 1;
+
+            @include tablet(){
+                margin-left: 35px;
+            }
 
 
             .breadcrumbs{
@@ -180,7 +214,7 @@ body{
                     li{
                         list-style: none;
                         font-weight: 400;
-                        font-size: 25px;
+                        font-size: 22px;
                         line-height: 30px;
                         color: #898989;
 
@@ -200,7 +234,7 @@ body{
 
                         &:nth-last-child(1){
                             font-weight: 500;
-                            font-size: 25px;
+                            font-size: 22px;
                             line-height: 30px;
                             color: $nero;
                         }
@@ -209,7 +243,7 @@ body{
 
                 .stato{
                     font-weight: 500;
-                    font-size: 18px;
+                    font-size: 17px;
                     color: #659711;
                     background: rgba(101, 151, 17, 0.1);
                     border-radius: 10px;
@@ -225,7 +259,7 @@ body{
                     display: flex;
                     border-radius: 10px;
                     color: white;
-                    font-size: 25px;
+                    font-size: 22px;
                     
                     &:hover{
                         cursor: pointer;
@@ -277,10 +311,17 @@ body{
             flex-wrap: wrap;
             margin-top: 35px;
 
+            @include laptop(){
+                flex-direction: column;
+            }
+
 
             .widget{
                 margin: 0 35px 35px 0px;
 
+                @include tablet(){
+                    margin-left: 35px;
+                }
                 .head{
                     padding: 40px;
                     display: flex;
@@ -300,13 +341,13 @@ body{
 
                     .titolo{
                         font-weight: 500;
-                        font-size: 25px;                        
+                        font-size: 22px;                        
                     }
                     
                     .cta{
                         color: $colore-principale;
                         font-weight: 600;
-                        font-size: 20px;
+                        font-size: 18px;
                         cursor: pointer;
                     }
                 }
@@ -328,12 +369,12 @@ body{
                                 
                                 &:first-child{
                                     font-weight: 600;
-                                    font-size: 20px;
+                                    font-size: 17px;
                                     color: $grigio-chiaro;
                                 }
                                 &:nth-child(2){
                                     font-weight: 400;
-                                    font-size: 20px;
+                                    font-size: 17px;
                                     line-height: 24px;
                                 }
     
@@ -358,7 +399,7 @@ body{
 
                                 &:nth-child(1){
                                     font-weight: 500;
-                                    font-size: 20px;
+                                    font-size: 18px;
                                 }
                                 &:nth-child(2){
                                     font-weight: 400;
@@ -395,7 +436,7 @@ body{
                             :nth-child(n){
                                 width: 50%;
                                 text-align: center;
-                                font-size: 20px;
+                                font-size: 18px;
                                 border-bottom: 4px solid $grigio-molto-chiaro;
                                 padding: 20px 0px;
                                 cursor: pointer;
@@ -473,14 +514,26 @@ body{
 
             .sinistra{
                 width: 60%;
+
+                @include laptop(){
+                    width: 100%;
+                }
             }
 
             .destra{
                 width: 40%;
+
+                @include laptop(){
+                    width: 100%;
+                }
             }
 
             .pieno{
-                width: 100vw;
+                width: 100%;
+
+                @include laptop(){
+                    width: 100%;
+                }
             }
         }
     }
@@ -495,7 +548,7 @@ body{
 .icona-tre-puntini{
     cursor: pointer;
     &::after{
-        content: url('/Dashboard-UI--di-BoringHub/img/icona-tre-puntini.svg');
+        content: url('../img/icona-tre-puntini.svg');
         display: flex;
         height: 35px;
         width: 35px;
